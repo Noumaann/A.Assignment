@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.Assingment</title>
+    <script>
+       
+//......3......//       
+
+        // let greeting = "Hello";
+        // document.write(greeting);
+
+        // let name = "World";
+        // document.write(name);
+
+        // let c = greeting+name
+        // alert(c);
+
+
+    // const reg1 = /l/g
+    // const reg2 = /o/g
+    // const str = "HelloWorld"
+    // const newStr1 = str.replace(reg1, "1")
+    // const newStr2 = newStr1.replace(reg2, "0");
+        // document.write(newStr2) 
+
+
+
+
+//...4... Conditional Logic//
+
+        let date = new Date();
+        let currentHour = date.getHours();
+
+        if (currentHour >= 5 && currentHour < 12) {
+          document.write("Good morning!");
+        } else if (currentHour >= 12 && currentHour < 17) {
+          document.write("Good afternoon!");
+        } else if (currentHour >= 17 && currentHour < 21) {
+          document.write("Good evening!");
+        } else {
+          document.write("Good night!");
+        }
+
+
+
+
+
+//....5.... A Sandwich Calculator//     
+
+        // function sandwichCalculator(bread, cheese) {
+        //     return Math.min(Math.floor(bread / 2), Math.floor(cheese));
+        // }
+
+        //     console.log(sandwichCalculator(10, 5)); 
+        //     console.log(sandwichCalculator(10, 1)); 
+
+
+
+
+
+
+//....7....Pizza//        
+
+        // var toppings=['Cheese', 'Ham', 'Bits', 'Tomatoes'];
+        //    function makePizza(){
+        //     document.write("A tasty pizza with ")
+        //     for (var i =0; i<toppings.length;i++)
+        //     {
+        //         document.write(toppings[i])
+        //         if(i!=toppings.length-1)
+        //         {
+        //         document.write(' and ')
+        //     }}
+        //     }
+        //     makePizza()
+
+
+
+
+
+
+//....8....Capitalise every elemengt//   
+
+        // var arr= ["john", "doe"];
+        // function capitaliseArray(arr) {
+        //   return arr.map(function(str) {
+        //     return str.toUpperCase();
+        //   });
+        // }
+        // document.write(capitaliseArray(arr));
+
+
+
+
+
+
+//....9...Array Strings//
+
+        // function printInFrame(list) {
+        //   let longestString = 0;
+        
+        //   for (let i = 0; i < list.length; i++) {
+        //     if (list[i].length > longestString) {
+        //       longestString = list[i].length;
+        //     }
+        //   }
+        
+        //    document.write("*".repeat(longestString + 4)+"<br>");
+        
+        //   for (let i = 0; i < list.length; i++) {
+        //     document.write(`* ${list[i]}`);
+        //     document.write(`${" ".repeat(longestString - list[i].length)} *`+"<br>");
+        //   }
+        
+        //   document.write("*".repeat(longestString + 4));
+        // }
+        // let list = ["Hello", "World", "in", "a", "frame"];
+        // printInFrame(list)
+
+
+
+
+
+
+//.....10...//
+
+        // function translateToPigLatin(text) {
+        
+        // let words = text.split(" ");
+        
+        // let pigLatinWords = words.map(word => {
+        //     let firstLetter = word[0];
+        //     let restOfWord = word.slice(1);
+        //     return restOfWord + firstLetter + "ay";
+        // });
+        
+        // return pigLatinWords.join(" ");
+        // }
+
+        // function translateToEnglish(text) {
+        //     let words = text.split(" ");
+        //     let englishWords = words.map(word => {
+        //         let lastLetters = word.slice(-3);
+        //         let restOfWord = word.slice(0, -3);
+        //         return lastLetters.slice(0, -2) + restOfWord;
+        //     });
+        //     return englishWords.join(" ");
+        // }
+        // let text = "The quick brown fox";
+        // document.write(translateToPigLatin(text)+"<br>"); 
+        // document.write(translateToEnglish("Hetay uickqay rownbay oxfay")) 
+
+
+
+
+
+
+//....11....//
+
+        // function nearestLarger(arr) {
+        //     let result = {};
+        //     for (let i = 0; i < arr.length; i++) {
+        //         let nearest = null;
+        //         let nearestDistance = Number.MAX_SAFE_INTEGER;
+        //         for (let j = i + 1; j < arr.length; j++) {
+        //             if (arr[j] > arr[i]) {
+        //                 if (j - i < nearestDistance) {
+        //                     nearest = arr[j];
+        //                     nearestDistance = j - i;
+        //                 }
+        //             }
+        //         }
+        //         result[arr[i]] = nearest;
+        //     }
+        //     return result;
+        // }
+        // let arr = [1,4,3,2,5,7];
+        // document.write(nearestLarger(arr));
+
+
+
+
+
+
+
+
+//....12...//        
+
+        // function persistence(num) {
+        //     let count = 0;
+        //     while (num >= 10) {
+        //         num = num.toString().split('').reduce((a, b) => a * b);
+        //         count++;
+        //     }
+        //     return count;
+        // }
+
+        // console.log(persistence(999)); 
+
+
+
+
+
+
+
+//....14..Tic Tac Toe game...//        
+
+    // class TicTacToe {
+    //     constructor() {
+    //         this.grid = [
+    //             [null, null, null],
+    //             [null, null, null],
+    //             [null, null, null]
+    //         ];
+    //         this.player = 'X';
+    //     }
+
+    //     move(row, col) {
+    //         if (this.grid[row][col] === null) {
+    //             this.grid[row][col] = this.player;
+    //             if (this.checkWin(this.player)) {
+    //                 document.write(`Player ${this.player} wins!`);
+    //                 return;
+    //             }
+    //             this.player = this.player === 'X' ? 'O' : 'X';
+    //         } else {
+    //             document.write('Invalid move, the block is already filled.');
+    //         }
+    //     }
+
+    //     checkWin(player) {
+
+    //         for (let row = 0; row < 3; row++) {
+    //             if (this.grid[row][0] === player &&
+    //                 this.grid[row][1] === player &&
+    //                 this.grid[row][2] === player) {
+    //                 return true;
+    //             }
+    //         }
+
+    //         // check columns
+    //         for (let col = 0; col < 3; col++) {
+    //             if (this.grid[0][col] === player &&
+    //                 this.grid[1][col] === player &&
+    //                 this.grid[2][col] === player) {
+    //                 return true;
+    //             }
+    //         }
+
+    //         if (this.grid[0][0] === player &&
+    //             this.grid[1][1] === player &&
+    //             this.grid[2][2] === player) {
+    //             return true;
+    //         }
+
+    //         if (this.grid[0][2] === player &&
+    //             this.grid[1][1] === player &&
+    //             this.grid[2][0] === player) {
+    //             return true;
+    //         }
+    //         return false;
+    //     }
+    // }
+
+    //         const game = new TicTacToe();
+    //         game.move(0, 0);
+    //         game.move(0, 1);
+    //         game.move(0, 2);
+    //         game.move(1, 1); 
+    //         game.move(1, 2); 
+    //         game.move(2, 2); 
+
+
+
+
+
+
+
+//....15...//
+
+        // function measureDepth(arr) {
+        //     let depth = 0;
+        //     while (Array.isArray(arr)) {
+        //         depth++;
+        //         arr = arr[0];
+        //     }
+        //     return depth;
+        // }
+        // console.log(measureDepth([[[[[[[[[[[[]]]]]]]]]]]])); 
+                
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
